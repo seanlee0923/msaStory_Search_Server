@@ -1,4 +1,4 @@
-package com.domain;
+package com.msastory.search.domain;
 
 import lombok.Data;
 
