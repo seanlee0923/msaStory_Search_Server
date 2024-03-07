@@ -18,7 +18,6 @@ public class SearchController {
     private final SearchService searchService;
 
     @GetMapping("/firstTest")
-    @ResponseBody
     public String testApString() {
         return "test";
     }
