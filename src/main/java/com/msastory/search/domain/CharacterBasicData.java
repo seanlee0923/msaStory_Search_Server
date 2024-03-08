@@ -1,15 +1,21 @@
 package com.msastory.search.domain;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.msastory.search.config.ZonedDateTimeDeserializer;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * CharacterData
  */
 @Data
+@ToString
 public class CharacterBasicData {
-    private LocalDateTime date;
+    @JsonDeserialize(using = ZonedDateTimeDeserializer.class)
+    private ZonedDateTime date;
     private String character_name;
     private String world_name;
     private String character_gender;
